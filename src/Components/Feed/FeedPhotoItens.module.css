@@ -1,0 +1,76 @@
+.photo {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0rem;
+  font-family: Inter, Georgia, 'Times New Roman', Times, serif;
+   transition: box-shadow 0.3s ease;
+}
+.visualition{
+  background: #eee;
+  font-size: 1rem;
+}
+.userPost svg > *{
+  fill: #000;
+}
+.userPost{
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem
+}
+.author{
+  font-size:1.5rem;
+}
+.userInformation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.date{
+  font-size: 0.8rem;
+  color:#999;
+}
+.userIcon{
+  display: flex;
+  border: 2px solid #000;
+  padding: 0.5rem;
+  width:2.5rem ;
+  height: 2.5rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.informationPost{
+  padding: 0.5rem;
+}
+.informationPost p{
+  font-size: 1rem;
+}
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay svg {
+  width: 40px;
+  height: 40px;
+}
+.post:hover{
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.photo:hover .overlay {
+  opacity: 1;
+}

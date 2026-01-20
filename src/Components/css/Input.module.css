@@ -1,0 +1,40 @@
+
+.wrapper{
+  display: block;
+  width: 100%;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+;
+}
+.Label{
+  display: block;
+  margin: 0.3rem;
+  color:#333;
+  font-size: 1rem;
+}
+.Input{
+  display: block;
+  background: transparent;
+  color: #333;
+  transition: 1s;
+  border-radius: 0.5rem;
+  border: 1px solid #154DBF;
+  margin-bottom: 0.5rem;
+}
+
+.Input:hover,
+.Input:focus{
+  outline: none;
+  box-shadow:  0 0 0 2px #9FC3F2,
+  0 0 0 3px #4B93F2;
+}
+
+/* ===== SIZES ===== */
+.sm {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.6rem;
+}
+
+.md {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}

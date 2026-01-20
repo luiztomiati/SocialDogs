@@ -1,0 +1,99 @@
+.Button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.ButtonCreate{
+  display: block;     
+  padding: 0.40rem 1.10rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+  background: #2DEB54;
+  width: 50%;
+  margin-top: 1rem;
+  text-decoration: none;     
+  text-align: center;  
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.ButtonCreate:hover:not(:disabled),
+.ButtonCreate:focus:not(:disabled){
+  background: #55E80C;
+  box-shadow: 0 0 0 2px #0CE84D, 0 0 0  3px #2DEB54;
+}
+.ButtonPasswordLost{
+  text-decoration:underline;
+  color:#333;
+  display: inline-flex; 
+  justify-content: flex-start;
+  transition: color 0.3s;
+  padding: 0 0 0.7rem
+}
+.ButtonPasswordLost:hover{
+  color:#000;
+}
+.ButtonLogin{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ===== VARIANTS ===== */
+
+.primary {
+  background-color: #154DBF;
+  color: #ffffff;
+}
+
+.primary:hover:not(:disabled),
+.primary:focus:not(:disabled) {
+  box-shadow: 0 0 0 2px #4B93F2, 0 0 0 3px #9FC3F2;
+  background: #155DBF;
+}
+
+.secondary {
+  background: #eaeaea;
+  color: #333;
+}
+
+.secondary:hover:not(:disabled)
+.secundary:focus:not(:disabled) {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.danger {
+  background-color: #c0392b;
+  color: #ffffff;
+}
+
+.danger:hover:not(:disabled)
+.danger:focus:not(:disabled) {
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.35);
+}
+
+/* ===== SIZES ===== */
+
+.sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.md {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}
+
+.lg {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
+}
+
+/* ===== DISABLED ===== */
+
+.Button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

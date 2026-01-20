@@ -1,0 +1,77 @@
+.Header{
+  position: fixed;
+  padding: 0.5rem ;
+  border-bottom: 1px solid #4B93F2;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  top: 0px;
+  background: #9FC3F2;
+  z-index: 1000;
+}
+.HeaderNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.HeaderLogo {
+  padding: 0.5rem 1rem;
+}
+.HeaderLogo:hover:not(:disabled) svg > *,
+.HeaderLogo:focus:not(:disabled) svg > * {
+  transition: 1s;
+  fill: #000;
+}
+.HeaderLinks{
+  color: #fff;
+  padding: 0.5rem;
+}
+.HeaderLinks:hover:not(:disabled),
+.HeaderLinks:focus:not(:disabled),
+.HeaderLinks:hover:not(:disabled) svg > *,
+.HeaderLinks:focus:not(:disabled) svg > *{
+  transition: 1s;
+  color: #000;
+  fill: #333;
+}
+.HeaderLinksLogin{
+  color:#fff;
+  padding: 0 0.8rem;
+}
+.HeaderLinksLogin:hover:not(:disabled),
+.HeaderLinksLogin:focus:not(:disabled),
+.HeaderLinksLogin:hover:not(:disabled) svg > *,
+.HeaderLinksLogin:focus:not(:disabled) svg > *
+{
+  transition: 0.5s;
+  color:#000;
+  fill: #000;
+}
+.LinksHeaders a:global(.active){
+  color: #000;
+}
+.UserLogin{
+  margin-left: 7px;
+}
+.containerLinks{
+  display: flex;
+  align-items: center;
+}
+.HeaderBtnLogout{
+  padding: 0 0.5rem;
+  border: none;
+  border-left: #fff solid 1px;
+  background: transparent;
+  cursor: pointer;
+}
+.HeaderBtnLogout:hover:not(:disabled) svg > *,
+.HeaderBtnLogout:focus:not(:disabled) svg > *{
+  fill:#000;
+  transition: 0.5s;
+}
+
+
+
+
+
