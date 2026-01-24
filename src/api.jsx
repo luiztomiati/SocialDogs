@@ -71,13 +71,26 @@ export const GetPhotos = ({ total, page, user }) => {
     },
   };
 };
+export const GetPhoto = (Id) => {
+  return {
+    url: `${URL}/api/photo/${Id}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+};
 
-// // query: ?_total=1&_page=1&_user=6
-// const PHOTO_GET = {
-//   endpoint: {
-//     photos: '/api/photo',
-//     photos_query: '/api/photo/?_total=9&_page=1&_user=0',
-//     photo: '/api/photo/:id',
-//   },
-//   method: 'GET',
-// };
+export const PostComment = (id, body, token) => {
+  return {
+    url: `${URL}/api/comment/${id}`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+};
