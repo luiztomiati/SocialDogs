@@ -1,10 +1,13 @@
 import styles from './FeedPhotoItens.module.css';
 import User from '../Assets/usuario.svg?react';
-import Eyes from '../Assets/visualizacao-black.svg?react';
+import Eyes from '../Assets/visualizacao.svg?react';
 
-const FeedPhotosItens = ({ photo }) => {
+const FeedPhotosItens = ({ photo, setModalPhoto }) => {
+  function ModalPhoto() {
+    setModalPhoto(photo);
+  }
   return (
-    <section>
+    <section onClick={ModalPhoto}>
       <li className={styles.photo}>
         <div className={styles.userPost}>
           <div className={styles.userIcon}>
@@ -18,7 +21,7 @@ const FeedPhotosItens = ({ photo }) => {
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <img className={styles.imgFeed} src={photo.src} alt={photo.title} />
+          <img src={photo.src} alt={photo.title} />
           <div className={styles.overlay}>
             <Eyes />
             <span>{photo.acessos}</span>
