@@ -94,3 +94,14 @@ export const PostComment = (id, body, token) => {
     },
   };
 };
+export const DelPhoto = (id, token) => {
+  return {
+    url: `${URL}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+    },
+  };
+};

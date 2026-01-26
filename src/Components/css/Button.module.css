@@ -65,13 +65,21 @@
 }
 
 .danger {
-  background-color: #c0392b;
+  background: #e74c3c;
   color: #ffffff;
 }
 
-.danger:hover:not(:disabled)
+.danger:hover:not(:disabled),
 .danger:focus:not(:disabled) {
   box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.35);
+}
+.success{
+  background: #1dc950;
+  color:#fff;
+}
+.success:hover:not(:disabled),
+.success:focus:not(:disabled) {
+  box-shadow: 0 0 0 3px rgba(29, 201, 80, 0.3);
 }
 
 /* ===== SIZES ===== */
