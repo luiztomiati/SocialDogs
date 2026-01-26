@@ -9,12 +9,14 @@ const Button = ({
   size = 'md',
   children,
   className = '',
+  onClick,
 }) => {
   return (
     <button
       className={`${Styles.Button} ${Styles[size]} ${Styles[variant]} ${className} `}
       type={type}
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </button>
@@ -27,5 +29,6 @@ Button.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   disabled: PropTypes.bool,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 };
 export default Button;

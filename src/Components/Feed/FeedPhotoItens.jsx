@@ -1,6 +1,7 @@
 import styles from './FeedPhotoItens.module.css';
 import User from '../Assets/usuario.svg?react';
 import Eyes from '../Assets/visualizacao.svg?react';
+import Image from '../../helpers/Image';
 
 const FeedPhotosItens = ({ photo, setModalPhoto }) => {
   function ModalPhoto() {
@@ -21,7 +22,7 @@ const FeedPhotosItens = ({ photo, setModalPhoto }) => {
           </div>
         </div>
         <div className={styles.imageWrapper}>
-          <img src={photo.src} alt={photo.title} />
+          <Image src={photo.src} alt={photo.title} />
           <div className={styles.overlay}>
             <Eyes />
             <span>{photo.acessos}</span>
