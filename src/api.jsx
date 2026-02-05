@@ -63,6 +63,7 @@ export const PhotoPost = (FormData, token) => {
   };
 };
 export const GetPhotos = ({ total, page, user }) => {
+  console.log(user);
   return {
     url: `${URL}/api/photo?_total=${total}&_page=${page}&_user=${user}`,
     options: {
