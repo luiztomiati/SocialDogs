@@ -6,15 +6,15 @@ import styles from './FeedPhotos.module.css';
 import Loading from '../../helpers/Loading';
 import Errors from '../../helpers/Errors';
 
-const FeedPhotos = ({ setModalPhoto }) => {
+const FeedPhotos = ({ setModalPhoto, user }) => {
   const { request, dados, loading, error } = useFetch();
   React.useEffect(() => {
     async function GetPhotosFeed() {
-      const { url, options } = GetPhotos({ total: 6, page: 1, user: 0 });
+      const { url, options } = GetPhotos({ total: 6, page: 1, user });
       await request(url, options);
     }
     GetPhotosFeed();
-  }, [request]);
+  }, [request, user]);
   if (loading) return <Loading />;
   if (error) return <Errors error={error} />;
   if (dados)

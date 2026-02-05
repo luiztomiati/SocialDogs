@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';
 import Login from './Components/Login/Login.jsx';
-import Home from './Components/Home.jsx';
+import Feed from './Components/Feed/Feed.jsx';
 import CreateRegistration from './Components/Login/CreateRegistration.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -21,7 +21,7 @@ function App() {
               path="/"
               element={
                 <ProtectedRouter>
-                  <Home />
+                  <Feed />
                 </ProtectedRouter>
               }
             ></Route>
