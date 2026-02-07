@@ -12,7 +12,7 @@ const MyAccount = () => {
     <section className="container">
       <HeaderOfAccount />
       <Routes>
-        <Route path="/" element={<Home user={user.id} />}></Route>
+        <Route path="/" element={<Home user={user.id} total={6} />}></Route>
         <Route path="CreatedPost" element={<CreatedPost />}></Route>
         <Route path="Statistics" element={<Statistics />}></Route>
       </Routes>

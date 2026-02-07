@@ -21,7 +21,7 @@ function App() {
               path="/"
               element={
                 <ProtectedRouter>
-                  <Feed />
+                  <Feed total={6} />
                 </ProtectedRouter>
               }
             ></Route>
