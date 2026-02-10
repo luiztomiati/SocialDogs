@@ -6,6 +6,7 @@ import styles from '../css/Form.module.css';
 import Button from '../Forms/Button';
 import Loading from '../../helpers/Loading';
 import Errors from '../../helpers/Errors';
+import Head from '../../helpers/Head';
 
 const PasswordLost = () => {
   const login = useForm();
@@ -22,6 +23,10 @@ const PasswordLost = () => {
   }
   return (
     <section className="container">
+      <Head
+        title={'Esqueceu a senha'}
+        description={'Solicitar a troca de senha'}
+      />
       <h1 className="Title formContent ">Esqueceu a Senha</h1>
       <p>Digite o login ou email cadastrado.</p>
       <div className="FormBox">

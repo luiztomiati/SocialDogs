@@ -9,6 +9,7 @@ import Errors from '../../helpers/Errors';
 import styleCreated from '../css/CreatePost.module.css';
 import stylesForm from '../css/Form.module.css';
 import { useNavigate } from 'react-router-dom';
+import Head from '../../helpers/Head';
 
 const CreatedPost = () => {
   const nome = useForm();
@@ -44,6 +45,10 @@ const CreatedPost = () => {
   }
   return (
     <section className={styleCreated.SectionPost}>
+      <Head
+        title={'Criar post'}
+        description={'Crie e publique seus posts de forma rápida e organizada.'}
+      />
       <form onSubmit={Send}>
         <Input
           className={stylesForm.Input}

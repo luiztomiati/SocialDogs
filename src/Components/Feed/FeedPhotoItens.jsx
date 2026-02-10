@@ -2,6 +2,7 @@ import styles from './FeedPhotoItens.module.css';
 import User from '../Assets/usuario.svg?react';
 import Eyes from '../Assets/visualizacao.svg?react';
 import Image from '../../helpers/Image';
+import Head from '../../helpers/Head';
 
 const FeedPhotosItens = ({ photo, setModalPhoto }) => {
   function ModalPhoto() {
@@ -9,6 +10,7 @@ const FeedPhotosItens = ({ photo, setModalPhoto }) => {
   }
   return (
     <section onClick={ModalPhoto}>
+      <Head title={'Feed'} description={'Feed de fotos'} />
       <li className={styles.photo}>
         <div className={styles.userPost}>
           <div className={styles.userIcon}>
