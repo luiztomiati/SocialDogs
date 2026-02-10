@@ -51,7 +51,7 @@ const FormLogin = () => {
           </Input>
           {error && <Errors error={error} />}
           <div className={styles.containerBtnActions}>
-            <Link className={stylesBtn.ButtonPasswordLost} to={'Create'}>
+            <Link className={stylesBtn.ButtonPasswordLost} to={'PasswordLost'}>
               esqueceu a senha?
             </Link>
             {loading ? (
