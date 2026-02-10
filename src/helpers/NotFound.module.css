@@ -1,0 +1,10 @@
+.title{
+  color: #C95B4B
+}
+.wrapper {
+  display: flex;
+  min-height: 100%; 
+  text-align: center;
+  justify-content: center;
+  gap: 0.2rem; 
+}

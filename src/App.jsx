@@ -9,6 +9,8 @@ import './App.css';
 import { UserProvider } from './Components/UserContext.jsx';
 import ProtectedRouter from './helpers/ProtectedRouters.jsx';
 import MyAccount from './Components/User/MyAccount.jsx';
+import Profile from './Components/User/Profile.jsx';
+import NotFound from './helpers/NotFound.jsx';
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
               path="/"
               element={
                 <ProtectedRouter>
-                  <Feed />
+                  <Feed total={6} />
                 </ProtectedRouter>
               }
             ></Route>
@@ -46,6 +48,15 @@ function App() {
                 </ProtectedRouter>
               }
             ></Route>
+            <Route
+              path="/profile/:author"
+              element={
+                <ProtectedRouter>
+                  <Profile />
+                </ProtectedRouter>
+              }
+            ></Route>
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
           <Footer />
         </UserProvider>

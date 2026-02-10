@@ -14,9 +14,10 @@ const useFetch = () => {
       response = await fetch(url, options);
       result = await response.json();
       if (!response.ok) throw new Error(result.message);
-    } catch (e) {
+    } catch (error) {
       result = null;
-      setError(e.message);
+      console.log(error.message);
+      setError(error.message);
     } finally {
       setDados(result);
       setLoading(false);

@@ -1,0 +1,22 @@
+.authorExternal{
+  color:pink;
+}
+.userIcon{
+  display: flex;
+  border: 2px solid #777;
+  padding: 0.5rem;
+  width:2.5rem ;
+  height: 2.5rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.userPost{
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem
+}
+.userPost svg > *{
+  fill: #777;
+}

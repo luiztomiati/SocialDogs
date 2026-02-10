@@ -6,6 +6,7 @@ import CreateRegistration from './CreateRegistration';
 import PasswordLost from './PasswordLost';
 import styles from '../css/Login.module.css';
 import CreateAccount from './CreateAccount';
+import NotFound from '../../helpers/NotFound';
 const Login = () => {
   return (
     <section className={styles.Login}>
@@ -14,6 +15,7 @@ const Login = () => {
         <Route path="Reset" element={<ResetPassword />}></Route>
         <Route path="Create" element={<CreateAccount />}></Route>
         <Route path="PasswordLost" element={<PasswordLost />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </section>
   );
