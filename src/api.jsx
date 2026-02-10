@@ -105,3 +105,16 @@ export const DelPhoto = (id, token) => {
     },
   };
 };
+export const PasswordLostPost = (body) => {
+  console.log(body);
+  return {
+    url: `${URL}/api/password/lost`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+};
