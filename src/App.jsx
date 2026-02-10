@@ -14,54 +14,56 @@ import NotFound from './helpers/NotFound.jsx';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <UserProvider>
           <Header />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <ProtectedRouter>
-                  <Feed total={6} />
-                </ProtectedRouter>
-              }
-            ></Route>
-            <Route path="Login/*" element={<Login />}></Route>
-            <Route
-              path="CreateRegistration"
-              element={<CreateRegistration />}
-            ></Route>
-            <Route
-              path="MyAccount/*"
-              element={
-                <ProtectedRouter>
-                  <MyAccount />
-                </ProtectedRouter>
-              }
-            ></Route>
-            <Route
-              path="Feed/*"
-              element={
-                <ProtectedRouter>
-                  <MyAccount />
-                </ProtectedRouter>
-              }
-            ></Route>
-            <Route
-              path="/profile/:author"
-              element={
-                <ProtectedRouter>
-                  <Profile />
-                </ProtectedRouter>
-              }
-            ></Route>
-            <Route path="*" element={<NotFound />}></Route>
-          </Routes>
+          <main className="bodyApp">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <ProtectedRouter>
+                    <Feed total={6} />
+                  </ProtectedRouter>
+                }
+              ></Route>
+              <Route path="Login/*" element={<Login />}></Route>
+              <Route
+                path="CreateRegistration"
+                element={<CreateRegistration />}
+              ></Route>
+              <Route
+                path="MyAccount/*"
+                element={
+                  <ProtectedRouter>
+                    <MyAccount />
+                  </ProtectedRouter>
+                }
+              ></Route>
+              <Route
+                path="Feed/*"
+                element={
+                  <ProtectedRouter>
+                    <MyAccount />
+                  </ProtectedRouter>
+                }
+              ></Route>
+              <Route
+                path="/profile/:author"
+                element={
+                  <ProtectedRouter>
+                    <Profile />
+                  </ProtectedRouter>
+                }
+              ></Route>
+              <Route path="*" element={<NotFound />}></Route>
+            </Routes>
+          </main>
           <Footer />
         </UserProvider>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
