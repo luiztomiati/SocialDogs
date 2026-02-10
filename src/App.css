@@ -42,3 +42,11 @@ img {
   flex-direction: column;
   justify-content: space-between;
 }
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 10rem);
+}
+.bodyApp{
+  flex: 1;
+}
