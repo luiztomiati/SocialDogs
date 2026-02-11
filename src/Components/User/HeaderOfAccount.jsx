@@ -1,5 +1,4 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import UserNavLinks from './UserNavLinks';
 import Styles from '../css/HeaderNav.module.css';
 
