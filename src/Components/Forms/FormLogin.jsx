@@ -25,7 +25,7 @@ const FormLogin = () => {
     }
   }
   return (
-    <div className="container">
+    <div className={styles.wrapper}>
       <Head title={'Login'} description={'Realizar login'} />
       <form onSubmit={PostTokenLogin} className={styles.FormLogin}>
         <div className="FormBox">

@@ -5,7 +5,7 @@
   align-items: center;
   width: 100%;
   max-width: 40rem;
-  max-width: 0 auto;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 @media (max-width: 600px){
@@ -26,10 +26,11 @@
 }
 .FormLogin {
   display: flex;
-  flex-direction: column; 
-  align-items: center;   
-  justify-content: flex-start;
-  gap: 2rem;              
+  flex-direction: column;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+  gap: 2rem;
 }
 .containerBtnActions{
   width: 100%;
