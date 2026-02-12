@@ -129,3 +129,15 @@ export const GetStats = (token) => {
     },
   };
 };
+export const PasswordReset = (body) => {
+  return {
+    url: `${URL}/api/password/reset`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+};
