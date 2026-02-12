@@ -7,6 +7,7 @@ import Button from '../Forms/Button';
 import Loading from '../../helpers/Loading';
 import Errors from '../../helpers/Errors';
 import Head from '../../helpers/Head';
+import stylesLost from './PasswordLost.module.css';
 
 const PasswordLost = () => {
   const login = useForm();
@@ -22,34 +23,37 @@ const PasswordLost = () => {
     }
   }
   return (
-    <section className="container">
+    <section className={stylesLost.Wrapper}>
       <Head
         title={'Esqueceu a senha'}
         description={'Solicitar a troca de senha'}
       />
-      <h1 className="Title formContent ">Esqueceu a Senha</h1>
-      <p>Digite o login ou email cadastrado.</p>
       <div className="FormBox">
         {dados != null ? (
-          <p>Enviado com sucesso!</p>
+          <p>
+            Se o login existir em nossa base, você receberá um email com
+            instruções para redefinir sua senha.
+          </p>
         ) : (
-          <form onSubmit={sendEmail}>
-            <Input
-              className={styles.Input}
-              Id="username"
-              placeholder="Digite o usúario ou email"
-              type="text"
-              size="md"
-              {...login}
-            >
-              Login / Email
-            </Input>
-            {loading ? (
-              <Button disabled={true}>Carregando...</Button> && <Loading />
-            ) : (
-              <Button type="Submit">Logar</Button>
-            )}
-          </form>
+          <div className={stylesLost.LostContent}>
+            <form onSubmit={sendEmail}>
+              <h1 className="Title formContent ">Esqueceu a Senha</h1>
+              <Input
+                className={styles.Input}
+                Id="username"
+                placeholder="Digite o usuário ou email"
+                type="text"
+                size="md"
+                {...login}
+              >
+                Login / Email
+              </Input>
+              <Button type="submit" disabled={loading}>
+                {loading ? 'Enviando...' : 'Enviar'}
+              </Button>
+              {loading && <Loading />}
+            </form>
+          </div>
         )}
         {error && <Errors error={error} />}
       </div>

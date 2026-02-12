@@ -31,7 +31,7 @@ const CreateRegistration = () => {
   }
 
   return (
-    <div className="container">
+    <div>
       <form onSubmit={CreateUser} className={styles.FormLogin}>
         <div className="FormBox">
           <h1 className="Title formContent">Criar conta</h1>
@@ -42,7 +42,9 @@ const CreateRegistration = () => {
             type="text"
             size="md"
             {...username}
-          />
+          >
+            Usúario
+          </Input>
           <Input
             className={styles.Input}
             Id="email"
@@ -50,7 +52,9 @@ const CreateRegistration = () => {
             type="email"
             size="md"
             {...email}
-          />
+          >
+            Email
+          </Input>
           <Input
             className={styles.Input}
             Id="password"
@@ -58,7 +62,9 @@ const CreateRegistration = () => {
             type="password"
             size="md"
             {...password}
-          />
+          >
+            Senha
+          </Input>
           {error && <Errors error={error} />}
           {loading ? (
             <div>
