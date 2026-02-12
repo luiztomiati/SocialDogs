@@ -5,9 +5,6 @@ a{
   text-decoration: none;
   color: #333;
 }
-html, body, #root {
-  height: 100%;
-}
 body{
   margin: 0px;
   padding-top: 1rem;
@@ -22,7 +19,7 @@ img {
   max-width: 100%;
 }
 .container {
-  padding: 2rem;
+  padding: calc(2rem + 1rem) 1rem 3rem;
   margin: 0 auto;
 }
 .Title{
@@ -50,7 +47,9 @@ img {
   flex-direction: column;
   min-height: 100vh;
 }
-.bodyApp {
+.bodyApp{
   flex: 1;
-  display: flex;
+}
+.VictoryContainer{
+  height: inital !important;
 }

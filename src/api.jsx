@@ -106,7 +106,6 @@ export const DelPhoto = (id, token) => {
   };
 };
 export const PasswordLostPost = (body) => {
-  console.log(body);
   return {
     url: `${URL}/api/password/lost`,
     options: {
@@ -115,6 +114,18 @@ export const PasswordLostPost = (body) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+    },
+  };
+};
+
+export const GetStats = (token) => {
+  return {
+    url: `${URL}/api/stats`,
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
     },
   };
 };
