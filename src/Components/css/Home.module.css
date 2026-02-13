@@ -1,9 +1,10 @@
 .authorExternal{
-  color:pink;
+  color:#fff;
+  margin-left: 1rem;
 }
 .userIcon{
   display: flex;
-  border: 2px solid #777;
+  border: 2px solid #fff;
   padding: 0.5rem;
   width:2.5rem ;
   height: 2.5rem;
@@ -12,11 +13,11 @@
   justify-content: center;
 }
 .userPost{
-  padding: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem
+  border-radius: 1rem;
+  width: 100%;
 }
 .userPost svg > *{
-  fill: #777;
+  fill: #fff;
 }

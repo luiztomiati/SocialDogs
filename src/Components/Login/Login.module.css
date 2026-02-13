@@ -1,21 +1,8 @@
 .Login {
   display: grid;
-  grid-template-columns: 1fr 520px;
-  min-height: 100dvh;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.LoginImage {
-  position: relative;
-  background: url('../Assets/login.jpg') no-repeat center center;
-  background-size: cover;
-}
-.LoginImage::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  min-height: calc(100dvh - 5rem);
+  margin-top: 2.5rem;
+  width: 100%;
 }
 
 .LoginForm {
@@ -29,27 +16,16 @@
   align-items: center;
   padding: 2rem;
   animation: fadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-  margin-top: 2.3rem;
 }
 .LoginContent form {
-  background: #fff;
   padding: 2.2rem;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
   width: 100%;
   max-width: 400px;
   will-change: transform, opacity;
+  background: rgba(255, 255, 255, 0.4);
 }
-@media (max-width: 1024px) {
-  .Login {
-    grid-template-columns: 1fr;
-  }
-
-  .LoginImage {
-    display: none;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;

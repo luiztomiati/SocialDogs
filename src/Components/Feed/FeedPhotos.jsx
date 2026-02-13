@@ -5,6 +5,7 @@ import Errors from '../../helpers/Errors';
 
 const FeedPhotos = ({ setModalPhoto, loading, error, photos }) => {
   if (error) return <Errors error={error} />;
+  if (loading) return <Loading />;
   return (
     <section className={styles.container}>
       {photos &&
@@ -16,7 +17,6 @@ const FeedPhotos = ({ setModalPhoto, loading, error, photos }) => {
             setModalPhoto={setModalPhoto}
           />
         ))}
-      {loading && <Loading />}
     </section>
   );
 };

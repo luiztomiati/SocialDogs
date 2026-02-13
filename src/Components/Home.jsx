@@ -52,7 +52,9 @@ const Home = ({ user, total, authorExternal = false }) => {
           <div className={styles.userIcon}>
             <User />
           </div>
-          <h1 className={styles.authorExternal}>{user}</h1>
+          <div className={styles.userContainer}>
+            <h1 className={styles.authorExternal}>{user}</h1>
+          </div>
         </div>
       )}
       <FeedPhotos

@@ -18,12 +18,14 @@ const FeedModal = ({ photo, setModalPhoto }) => {
       setModalPhoto(null);
     }
   }
-  return (
-    <div onClick={Clickoutside} className={styles.modal}>
-      {loading && <Loading />}
-      {error && <Errors error={error} />}
-      {dados && <PhotoContent dados={dados} />}
-    </div>
-  );
+  if (error) return <Errors error={error} />;
+  if (loading) return <Loading />;
+  if (dados) {
+    return (
+      <div onClick={Clickoutside} className={styles.modal}>
+        {dados && <PhotoContent dados={dados} />}
+      </div>
+    );
+  } else return null;
 };
 export default FeedModal;
