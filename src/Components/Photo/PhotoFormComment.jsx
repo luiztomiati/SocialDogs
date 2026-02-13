@@ -8,11 +8,15 @@ import Button from '../Forms/Button';
 
 const PhotoFormComment = ({ id, setComments }) => {
   const [comment, setComment] = React.useState('');
-  const { request, error } = useFetch();
+  const { request, error, setError } = useFetch();
   async function SendComment(event) {
     event.preventDefault();
     const token = localStorage.getItem('token');
-    if (token) {
+    if (comment == '') {
+      setError('Digite o comentário antes de enviar.');
+      <Errors error={error} />;
+    }
+    if (token && comment != '') {
       const { url, options } = PostComment(id, { comment }, token);
       const { response, result } = await request(url, options);
       if (response.ok) {
@@ -22,9 +26,10 @@ const PhotoFormComment = ({ id, setComments }) => {
     }
   }
   return (
-    <div style={styles.formWrapper}>
+    <div className={styles.formWrapper}>
       <form onSubmit={SendComment} className={styles.form}>
         <label htmlFor="comment">Comentário</label>
+        {error && <Errors error={error} />}
         <div className={styles.actions}>
           <textarea
             className={styles.textArea}
@@ -34,7 +39,6 @@ const PhotoFormComment = ({ id, setComments }) => {
             value={comment}
             onChange={({ target }) => setComment(target.value)}
           ></textarea>
-          {error && <Errors error={error} />}
           <Button type={'submit'} className={styles.button}>
             <Send />
           </Button>

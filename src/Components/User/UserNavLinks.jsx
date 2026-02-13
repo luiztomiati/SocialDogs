@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from '../css/HeaderNav.module.css';
+import styles from '../User/HeaderNav.module.css';
 import Feed from '../Assets/Feed.svg?react';
 import Statistic from '../Assets/Estatisticas.svg?react';
 import Post from '../Assets/Adicionar.svg?react';

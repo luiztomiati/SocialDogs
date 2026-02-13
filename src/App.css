@@ -9,7 +9,11 @@ body{
   margin: 0px;
   padding-top: 1rem;
   font-family: Inter, Georgia, 'Times New Roman', Times, serif;
-  background: #f4f6f9;
+  background: linear-gradient(
+    180deg,
+    #87A7FC 0%,
+    #EEF1F5 100%
+  );
 }
 li, ul{
   list-style: none;

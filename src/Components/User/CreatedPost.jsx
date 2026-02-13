@@ -6,10 +6,11 @@ import Button from '../../Components/Forms/Button';
 import useFetch from '../../Hooks/useFetch';
 import { PhotoPost } from '../../api';
 import Errors from '../../helpers/Errors';
-import styleCreated from '../css/CreatePost.module.css';
+import styleCreated from '../User/CreatePost.module.css';
 import stylesForm from '../css/Form.module.css';
 import { useNavigate } from 'react-router-dom';
 import Head from '../../helpers/Head';
+import Loading from '../../helpers/Loading';
 
 const CreatedPost = () => {
   const nome = useForm();
@@ -43,6 +44,7 @@ const CreatedPost = () => {
       raw: target.files[0],
     });
   }
+  if (loading) return <Loading />;
   return (
     <section className={styleCreated.SectionPost}>
       <Head

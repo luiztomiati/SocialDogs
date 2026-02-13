@@ -13,7 +13,7 @@
 }
 .Input{
   display: block;
-  background: transparent;
+  background: #fff;
   color: #333;
   transition: 1s;
   border-radius: 0.5rem;

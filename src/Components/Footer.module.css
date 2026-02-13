@@ -1,10 +1,15 @@
 .footer{
-  background: #154DBF;
+ background: linear-gradient(
+    180deg,
+    rgba(223, 226, 229, 0.55),
+    rgba(21, 93, 191, 0.75)
+  );
+  backdrop-filter: blur(10px);
   padding: 3rem 1rem 0 1rem;
   height: 10rem;
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 .footer svg > * {
-  fill:#fff;
+  fill:#333;
 }

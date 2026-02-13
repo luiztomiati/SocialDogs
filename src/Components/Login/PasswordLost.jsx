@@ -22,6 +22,7 @@ const PasswordLost = () => {
       await request(url, options);
     }
   }
+  if (loading) return <Loading />;
   return (
     <section className={stylesLost.Wrapper}>
       <Head
@@ -48,10 +49,7 @@ const PasswordLost = () => {
               >
                 Login / Email
               </Input>
-              <Button type="submit" disabled={loading}>
-                {loading ? 'Enviando...' : 'Enviar'}
-              </Button>
-              {loading && <Loading />}
+              <Button type="submit" disabled={loading}></Button>
             </form>
           </div>
         )}

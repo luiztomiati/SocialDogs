@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import UserNavLinks from './UserNavLinks';
-import Styles from '../css/HeaderNav.module.css';
+import styles from '../User/HeaderNav.module.css';
 
 const HeaderOfAccount = () => {
   const titles = {
@@ -12,8 +12,8 @@ const HeaderOfAccount = () => {
   const title = titles[pathname] || 'Minha conta';
 
   return (
-    <header className={Styles.Header}>
-      <h1 className="Title">{title}</h1>
+    <header className={styles.Header}>
+      <h1 className={styles.Title}>{title}</h1>
       <UserNavLinks />
     </header>
   );
