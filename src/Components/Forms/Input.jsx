@@ -1,6 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Styles from '../css/Input.module.css';
+import Styles from './Input.module.css';
 import Errors from '../../helpers/Errors';
 
 const Input = ({

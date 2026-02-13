@@ -9,7 +9,7 @@ import { PasswordReset } from '../../api';
 import useFetch from '../../Hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
 import stylesLost from './PasswordLost.module.css';
-import styles from '../css/Form.module.css';
+import styles from '../Forms/Form.module.css';
 const ResetPassword = () => {
   const [login, setLogin] = useState();
   const [key, setKey] = useState();

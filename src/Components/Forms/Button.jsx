@@ -1,6 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Styles from '../css/Button.module.css';
+import Styles from './Button.module.css';
 
 const Button = ({
   disabled = false,
