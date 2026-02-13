@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from './Button';
-import styles from '../css/Form.module.css';
+import styles from './Form.module.css';
 import Input from './Input';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../Context/Context';
 import Errors from '../../helpers/Errors';
-import stylesBtn from '../css/Button.module.css';
+import stylesBtn from './Button.module.css';
 import { Link } from 'react-router-dom';
 import Head from '../../helpers/Head';
 const FormLogin = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import Styles from '../Components/css/Error.module.css';
+import styles from '../helpers/Error.module.css';
 
 const Errors = ({ error }) => {
   if (!error) return null;
-  return <p className={Styles.error}>{error}</p>;
+  return <p className={styles.error}>{error}</p>;
 };
 export default Errors;

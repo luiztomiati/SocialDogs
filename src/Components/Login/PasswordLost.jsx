@@ -2,7 +2,7 @@ import Input from '../Forms/Input';
 import useFetch from '../../Hooks/useFetch';
 import { PasswordLostPost } from '../../api';
 import useForm from '../../Hooks/useForm';
-import styles from '../css/Form.module.css';
+import styles from '../Forms/Form.module.css';
 import Button from '../Forms/Button';
 import Loading from '../../helpers/Loading';
 import Errors from '../../helpers/Errors';
@@ -49,7 +49,9 @@ const PasswordLost = () => {
               >
                 Login / Email
               </Input>
-              <Button type="submit" disabled={loading}></Button>
+              <Button type="submit" disabled={loading}>
+                Enviar
+              </Button>
             </form>
           </div>
         )}

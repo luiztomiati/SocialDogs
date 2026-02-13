@@ -1,13 +1,13 @@
 import React from 'react';
 import useForm from '../../Hooks/useForm';
 import Input from '../../Components/Forms/Input';
-import styles from '../css/Button.module.css';
+import styles from '../Forms/Button.module.css';
 import Button from '../../Components/Forms/Button';
 import useFetch from '../../Hooks/useFetch';
 import { PhotoPost } from '../../api';
 import Errors from '../../helpers/Errors';
 import styleCreated from '../User/CreatePost.module.css';
-import stylesForm from '../css/Form.module.css';
+import stylesForm from '../Forms/Form.module.css';
 import { useNavigate } from 'react-router-dom';
 import Head from '../../helpers/Head';
 import Loading from '../../helpers/Loading';
