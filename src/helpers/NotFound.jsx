@@ -14,7 +14,7 @@ const NotFound = () => {
       <div className={styles.wrapper}>
         <div className={styles.info}>
           <h1 className={styles.title}>404 - Ops! Pagina não encontrada</h1>
-          <h2>A página que você procura saiu pra passear.</h2>
+          <h2>A página que você procura saiu para passear.</h2>
         </div>
       </div>
     </section>
