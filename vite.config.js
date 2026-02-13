@@ -4,11 +4,11 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/SocialDogs/',
   plugins: [
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
-        base: '/SocialDogs/',
       },
     }),
     svgr(),
